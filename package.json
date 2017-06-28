@@ -3,10 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "highlight.js": "^9.12.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
   "devDependencies": {
+    "chokidar": "^1.7.0",
+    "npm-run-all": "^4.0.2",
+    "react-docgen": "^2.16.0",
     "react-scripts": "1.0.7",
     "surge": "^0.19.0"
   },
@@ -15,7 +19,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
+    "docs:gen": "node scripts/generateComponentData.js",
+    "docs:watch": "npm-run-all docs:gen -- --watch",
+    "predev": "npm run docs:gen",
+    "dev": "npm-run-all --parallel start docs:watch",
     "predeploy": "npm run build",
-    "deploy": "surge ./build"
+    "deploy": "surge ./build --domain ghg-react.surge.sh"
   }
 }
