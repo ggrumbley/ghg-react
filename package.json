@@ -54,7 +54,7 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "docs:gen": "node scripts/generateComponentData.js",
-    "docs:watch": "npm-run-all docs:gen -- --watch",
+    "docs:watch": "npm run docs:gen -- --watch",
     "predev": "npm run docs:gen",
     "dev": "npm-run-all --parallel start docs:watch",
     "predeploy": "npm run build",
