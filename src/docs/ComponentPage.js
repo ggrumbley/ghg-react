@@ -1,10 +1,11 @@
-import React, { PropTypes } from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 import Example from './Example';
 import Props from './Props';
 
 const ComponentPage = ({component}) => {
   const {name, description, props, examples} = component;
-  // TODO
+
   return (
     <div className="componentpage">
       <h2>{name}</h2>
