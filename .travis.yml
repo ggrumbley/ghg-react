@@ -13,6 +13,6 @@ deploy:
     domain: ghg-react.surge.sh
     skip_cleanup: true
   - provider: npm
-    email: stumblingrumblin@gmail.com
-    api_key: 8064487a-9b91-43f8-ab14-c042c017c9e1
-
+    email: "stumblingrumblin@gmail.com"
+    api_key: "8064487a-9b91-43f8-ab14-c042c017c9e1"
+    skip_cleanup: true
