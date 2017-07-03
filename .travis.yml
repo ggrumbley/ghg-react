@@ -8,9 +8,14 @@ directories:
   - node_modules
 script:
   - npm test
-  - npm run build
+  - npm run build:docs
+  - npm run build:lib
 deploy:
-  provider: surge
-  project: ./build/
-  domain: ghg-react.surge.sh
+  - provider: surge
+    project: ./build/
+    domain: ghg-react.surge.sh
+  - provider: npm
+    project: ./lib/
+    email: stumblingrumblin@gmail.com
+    api_key: 8064487a-9b91-43f8-ab14-c042c017c9e1
   skip_cleanup: true
