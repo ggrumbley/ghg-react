@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "main": "./lib/index.js",
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=6.0.0"
   },
   "author": {
     "name": "Gary Grumbley",
