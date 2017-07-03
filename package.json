@@ -1,6 +1,6 @@
 {
   "name": "ghg-react",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "main": "./lib/index.js",
   "engines": {
     "node": ">=6.0.0"
@@ -10,7 +10,9 @@
     "email": "dobber187@gmail.com",
     "url": "http://garygrumbley.com"
   },
-  "files": [ "lib" ],
+  "files": [
+    "lib"
+  ],
   "keywords": [
     "components",
     "react",
