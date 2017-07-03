@@ -1,22 +1,30 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Label from '../Label';
-import styled from 'styled-components';
+import React from "react";
+import PropTypes from "prop-types";
+import Label from "../Label";
+import styled from "styled-components";
 
 /** Text input with integrated label to enforce consistency in layout, error display, label placement, and required field marker. */
-const TextInput = ({htmlId, name, label, type = "text", required = false, onChange, placeholder, value, error, children, ...props}) => {
-  const Error = styled.div`
-    color: red;
-  `
+const TextInput = ({
+  htmlId,
+  name,
+  label,
+  type = "text",
+  required = false,
+  onChange,
+  placeholder,
+  value,
+  error,
+  children,
+  ...props
+}) => {
+  const Error = styled.div`color: red;`;
 
   const Input = styled.input`
-    border: ${error && 'solid 1px red'};
+    border: ${error && "solid 1px red"};
     display: block;
   `;
 
-  const Fieldset = styled.div`
-    margin-bottom: 16px;
-  `;
+  const Fieldset = styled.div`margin-bottom: 16px;`;
 
   return (
     <Fieldset>
@@ -28,9 +36,13 @@ const TextInput = ({htmlId, name, label, type = "text", required = false, onChan
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        {...props}/>
-        {children}
-      {error && <Error>{error}</Error>}
+        {...props}
+      />
+      {children}
+      {error &&
+        <Error>
+          {error}
+        </Error>}
     </Fieldset>
   );
 };
@@ -46,7 +58,7 @@ TextInput.propTypes = {
   label: PropTypes.string.isRequired,
 
   /** Input type */
-  type: PropTypes.oneOf(['text', 'number', 'password']),
+  type: PropTypes.oneOf(["text", "number", "password"]),
 
   /** Mark label with asterisk if set to true */
   required: PropTypes.bool,
